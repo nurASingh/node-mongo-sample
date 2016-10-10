@@ -8,7 +8,10 @@
   },
   "dependencies": {
     "ejs": "2.3.3",
-    "express": "4.13.3"
+    "express": "4.13.3",
+    "grunt": "~0.4.5",
+    "mongodb": "^2.2.10",
+    "pg": "6.1.0"
   },
   "engines": {
     "node": "0.12.7"
