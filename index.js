@@ -26,7 +26,12 @@ var dbname = 'mongodb://arun:123456@ds053156.mlab.com:53156/shubhlabh';
 app.get('/getdb', function(request, response) {
   MongoClient.connect(dbname, function(err, db) {
   if(!err) {
-    response.send("We are connected");
+    console.log("We are connected");
+    var collection = db.collection('user');
+    var arr = [];
+    collection.find({}).toArray(function(err, items) {            
+      response.send( items);
+    });  
   }
 });
 });
